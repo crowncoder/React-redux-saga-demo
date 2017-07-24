@@ -21,5 +21,5 @@ $ npm run dist (release mode)
 </pre>
 # Characteristic Introduction
 1. Responsive layout by using rem,flex
-2. Code 
+2. Code spliting and lazy loading according to the route changes
 
