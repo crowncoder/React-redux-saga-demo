@@ -1,0 +1,38 @@
+@import 'base.scss';
+
+
+.loginWrapper{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+}
+
+.login-form {
+  width: pxToRem(400);
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+.ant-form-item-control{
+    height:45px;
+}
+
+.loginBody{
+  text-align: center;
+}
+
+.loginImg{
+  width:pxToRem(150);
+  margin-bottom:pxToRem(40);
+}
+
+.rememberBox{
+  float:left
+}

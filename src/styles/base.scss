@@ -1,0 +1,4 @@
+@function pxToRem($width :x  , $scale : 16){   
+    @return ($width/$scale) + rem;
+}
+
