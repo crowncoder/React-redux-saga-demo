@@ -10,6 +10,7 @@ let defaultSettings = require('./defaults');
 let BowerWebpackPlugin = require('bower-webpack-plugin');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
+let SpritesmithPlugin = require('webpack-spritesmith');
 let config = Object.assign({}, baseConfig, {
   entry: { app: [path.join(__dirname, '../src/index')], vendor: ['react', 'react-dom'] },
   cache: false,
@@ -30,7 +31,19 @@ let config = Object.assign({}, baseConfig, {
         warnings: false
       }
     }),
-
+    new SpritesmithPlugin({
+      src: {
+          cwd: path.resolve(__dirname, '../src/images/icons'),  //准备合并成sprit的图片存放文件夹
+          glob: '*.png'  //哪类图片
+      },
+      target: {
+          image: path.resolve(__dirname, '../src/images/sprites.png'),  // sprite图片保存路径
+          css: path.resolve(__dirname, '../src/styles/_sprites.scss')  // 生成的sass保存在哪里
+      },
+      apiOptions: {
+          cssImageRef: "../images/sprites.png" //css根据该指引找到sprite图
+      }
+  }),
     new HtmlWebpackPlugin(
       {
         filename: '../index.html',

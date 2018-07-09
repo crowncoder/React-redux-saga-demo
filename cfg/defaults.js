@@ -25,7 +25,7 @@ function getDefaultModules() {
     rules: [
       { test: /\.js$/, enforce: 'pre', loader: 'eslint-loader', include: srcPath }, cssHandler, sassHandler,
       { test: /\.less/, use: ["style-loader", "css-loader", "less-loader?{modifyVars:{'@primary-color':'#00a890'}}"] },
-      { test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, use: 'url-loader?limit=50000&name=asserts/[name].[hash:5].[ext]' }
+      { test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, use: 'url-loader?limit=50000&name=asserts/[name].[hash:5].[ext]' },
     ]
 
   };

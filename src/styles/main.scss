@@ -1,6 +1,19 @@
 @import 'base.scss';
+@import '_sprites.scss';
 
 .welcome{
     text-align: center;
     line-height:pxToRem(970);
+}
+
+.userImage{
+    @include sprite($user);
+
+}
+.settingImage{
+    background-image:url('../images/icons/setting.png');
+    float:right;
+    width:32px;
+    height:32px;
+    margin-right:20px;
 }
