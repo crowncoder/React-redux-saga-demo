@@ -22,4 +22,7 @@ $ npm run dist (release mode)
 # Characteristic Introduction
 1. Responsive layout by using rem,flex
 2. Code spliting and lazy loading according to the route changes
+3. Use css sprites to reduce http requests
+4. Use dll plugin to improve bundle speed
+5. develop two webpack plugins for watching changes and deploying
 
