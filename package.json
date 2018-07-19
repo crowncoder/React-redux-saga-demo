@@ -5,7 +5,7 @@
   "description": "an initial react redux project",
   "main": "",
   "scripts": {
-    "clean": "rimraf dist/*",
+    "clean": "rimraf dist/js/* dist/css/*",
     "dist": "npm run clean & webpack --env=dist",
     "lint": "eslint ./src",
     "posttest": "npm run lint",
@@ -61,7 +61,7 @@
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.9",
-    "webpack": "^2.6.1",
+    "webpack": "^3.0.0",
     "webpack-dev-server": "^2.4.5",
     "webpack-spritesmith": "^0.4.1"
   },

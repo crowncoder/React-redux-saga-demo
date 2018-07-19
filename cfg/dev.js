@@ -4,6 +4,7 @@ let path = require('path');
 let webpack = require('webpack');
 let baseConfig = require('./base');
 let defaultSettings = require('./defaults');
+let watchChangePlugin = require('./plugin/watchChangePlugin.js')
 
 let config = Object.assign({}, baseConfig, {
   entry:{
@@ -17,8 +18,9 @@ let config = Object.assign({}, baseConfig, {
     publicPath: defaultSettings.publicPath,
     chunkFilename: '[name].chunk.js'
   },
-  devtool:'eval-source-map',
+  devtool:'cheap-module-eval-source-map',
   plugins: [
+    new watchChangePlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],

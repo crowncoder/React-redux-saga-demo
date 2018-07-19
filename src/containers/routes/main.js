@@ -1,12 +1,12 @@
 import React from 'react';
-import 'styles/Main.scss'
+import mainStyle from'styles/Main.scss'
 const Main=()=>{
     return(
         <div>
-        <div className="userImage"></div>
-        <div className="settingImage"></div>
+            <div className={mainStyle.userImage}></div>
+            <div className={mainStyle.settingImage}></div>
         <article>
-        <header><h1 className="welcome">Welcome to GTC's Demo</h1></header>
+            <header><h1 className={mainStyle.welcome}>Welcome to GTC's Demo</h1></header>
         </article>
         </div>
     )

@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import winResize from 'util/windowResize'
-import 'styles/app.scss'
+import  appStyle from 'styles/app.scss'
 class App extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +16,7 @@ class App extends Component {
 
   render() {
     return (
-      <div id="view">
+      <div id="view" className={appStyle.view}>
         {this.props.children}
       </div>
     );

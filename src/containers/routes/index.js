@@ -3,7 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import LoginForm from 'components/loginForm'
 import action from 'actions/loginAction'
-import 'styles/login.scss'
+import indexStyle from 'styles/login.scss'
+
 const loginImg=require('images/wechat.png');
 class loginContainer extends Component {
 
@@ -14,9 +15,10 @@ class loginContainer extends Component {
 
     render() {
         return (
-            <div className='loginWrapper'>
-                <div className='loginBody'>
-                <img className='loginImg' src={loginImg} />
+            
+            <div className={indexStyle.loginWrapper}>
+                <div className={indexStyle.loginBody}>
+                <img className={indexStyle.loginImg} src={loginImg} />
                 <LoginForm actions={this.props.actions}/>
                 </div>
             </div>

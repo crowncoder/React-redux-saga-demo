@@ -8,10 +8,14 @@
 
 .userImage{
     @include sprite($user);
+    float:right;
+    width:32px;
+    height:32px;
+    margin-right:20px;
 
 }
 .settingImage{
-    background-image:url('../images/icons/setting.png');
+     @include sprite($setting);
     float:right;
     width:32px;
     height:32px;

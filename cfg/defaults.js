@@ -16,11 +16,17 @@ const dfltPort = 8000;
  * @return {Object}
  */
 function getDefaultModules() {
-  let cssHandler = process.env.mode === 'dist' ? { test: /\.css$/, use: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader" }) } :
+  let cssHandler = process.env.mode === 'dist' ? { test: /\.css$/, use: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader?minisize" }) } :
     { test: /\.css/, use: ["style-loader", "css-loader"] };
 
-  let sassHandler = process.env.mode === 'dist' ? { test: /\.scss/, use: ExtractTextPlugin.extract({ fallback: "style-loader", use: ["css-loader", "sass-loader"] }) } :
-    { test: /\.scss/, use: ["style-loader", "css-loader", "sass-loader"] };
+  let cssLoader = {
+    loader: 'css-loader',
+    options: {
+      modules: true,//让css-loader支持Css Modules。
+    }
+  };
+  let sassHandler = process.env.mode === 'dist' ? { test: /\.scss/, use: ExtractTextPlugin.extract({ fallback: "style-loader", use: [cssLoader, "sass-loader"] }) } :
+    { test: /\.scss/, use: ["style-loader", cssLoader, "sass-loader"] };
   return {
     rules: [
       { test: /\.js$/, enforce: 'pre', loader: 'eslint-loader', include: srcPath }, cssHandler, sassHandler,

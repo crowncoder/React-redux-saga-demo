@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import loginStyle from 'styles/login.scss'
 import 'styles/login.scss'
 
 
@@ -21,9 +22,10 @@ class NormalLoginForm extends Component {
     }
 
     render() {
+        console.log(loginStyle);
         const { getFieldDecorator } = this.props.form;
         return (
-                <Form onSubmit={this.handleSubmit} className="login-form">
+                <Form onSubmit={this.handleSubmit} className={loginStyle.loginForm}>
                     <FormItem>
                         {getFieldDecorator('userName', {
                             rules: [{ required: true, message: 'Please input your username!' }]
@@ -45,8 +47,8 @@ class NormalLoginForm extends Component {
                         })(
                             <Checkbox className='rememberBox' >Remember me</Checkbox>
                             )}
-                        <a className="login-form-forgot" href="">Forgot password</a>
-                        <Button type="primary" htmlType="submit" className="login-form-button">
+                        <a className={loginStyle.loginFormForgot} href="">Forgot password</a>
+                        <Button type="primary" htmlType="submit" className={loginStyle.loginFormButton}>
                             Log in
                         </Button>
                     </FormItem>

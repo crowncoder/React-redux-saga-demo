@@ -11,6 +11,7 @@ let BowerWebpackPlugin = require('bower-webpack-plugin');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let SpritesmithPlugin = require('webpack-spritesmith');
+let EndWebpackPlugin = require('./plugin//endWebpackPlugin.js')
 let config = Object.assign({}, baseConfig, {
   entry: { app: [path.join(__dirname, '../src/index')], vendor: ['react', 'react-dom'] },
   cache: false,
@@ -44,6 +45,17 @@ let config = Object.assign({}, baseConfig, {
           cssImageRef: "../images/sprites.png" //css根据该指引找到sprite图
       }
   }),
+     new EndWebpackPlugin(() => {
+     console.log("哈哈")
+    }, (err) => {
+      // Webpack 构建失败，err 是导致错误的原因
+      console.error(err);        
+    }),
+    
+    new webpack.DllReferencePlugin({
+      manifest: require('../dist/vendor.manifest.json'),
+    }),
+
     new HtmlWebpackPlugin(
       {
         filename: '../index.html',
