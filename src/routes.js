@@ -1,29 +1,19 @@
-
-import App from 'containers/app';
-import loginContainer from 'containers/routes'
-import { message} from 'antd';
+import loginContainer from "./containers/routes";
+import loadable from "@loadable/component";
+const MainComponent = loadable(() =>
+	import(/* webpackChunkName: "main" */ "./containers/routes/main")
+);
 const routes = [
-  {
-    path: '/',
-    component: App,
-    indexRoute: { component: loginContainer },
-    childRoutes: [
-       {
-        path: 'main',
-        getComponent(nextState, cb) {
-           require.ensure([], (require) => {
-           cb(null, require('./containers/routes/main').default)
-         }, 'Main')
-        },
-        onEnter:(nextState,replace,next)=>{
-          if(sessionStorage.getItem("loginStatus")!=='true'){
-            message.error('您尚未登录');
-            replace('/');
-          }
-          next();
-        }
-       }]
-  }
+	{
+		path: "/",
+		component: loginContainer,
+		exact: true
+	},
+	{
+		path: "/main",
+		component: MainComponent,
+		exact: true
+	}
 ];
 
 export default routes;
