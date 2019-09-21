@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import winResize from "util/windowResize";
 import PropTypes from "prop-types";
-import appStyle from "styles/app.scss";
+import appStyle from "../styles/app.scss";
 class App extends Component {
 	constructor(props) {
 		super(props);

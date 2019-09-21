@@ -6,6 +6,7 @@ import history from "./history";
 import { renderRoutes } from "react-router-config";
 import configureStore from "./stores";
 import routes from "./routes";
+import "styles/style.css";
 const store = configureStore();
 render(
 	<Provider store={store}>
