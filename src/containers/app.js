@@ -28,9 +28,8 @@ App.propTypes = {
 	actions: PropTypes.object.isRequired
 };
 
-function mapStateToProps(state) {
-	const props = {};
-	return props;
+function mapStateToProps() {
+	return {};
 }
 function mapDispatchToProps(dispatch) {
 	const actions = {};
