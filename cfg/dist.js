@@ -47,7 +47,7 @@ const config = Object.assign({}, baseConfig, {
 		),
 
 		new webpack.DllReferencePlugin({
-			manifest: require("../dist/vendor.manifest.json")
+			manifest: require(path.join(__dirname, "../vendor.manifest.json"))
 		}),
 
 		new HtmlWebpackPlugin({
