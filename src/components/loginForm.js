@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Form, Icon, Input, Button, Checkbox } from "antd";
-import loginStyle from "styles/login.scss";
-import "styles/login.scss";
+import React, { Component } from 'react';
+import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import loginStyle from 'styles/login.scss';
+import 'styles/login.scss';
 
 const FormItem = Form.Item;
 class NormalLoginForm extends Component {
@@ -26,8 +26,8 @@ class NormalLoginForm extends Component {
 				className={loginStyle.loginForm}
 			>
 				<FormItem>
-					{getFieldDecorator("userName", {
-						rules: [{ required: true, message: "Please input your username!" }]
+					{getFieldDecorator('userName', {
+						rules: [{ required: true, message: 'Please input your username!' }]
 					})(
 						<Input
 							prefix={<Icon type="user" style={{ fontSize: 13 }} />}
@@ -36,8 +36,8 @@ class NormalLoginForm extends Component {
 					)}
 				</FormItem>
 				<FormItem>
-					{getFieldDecorator("password", {
-						rules: [{ required: true, message: "Please input your Password!" }]
+					{getFieldDecorator('password', {
+						rules: [{ required: true, message: 'Please input your Password!' }]
 					})(
 						<Input
 							prefix={<Icon type="lock" style={{ fontSize: 13 }} />}
@@ -47,8 +47,8 @@ class NormalLoginForm extends Component {
 					)}
 				</FormItem>
 				<FormItem>
-					{getFieldDecorator("remember", {
-						valuePropName: "checked",
+					{getFieldDecorator('remember', {
+						valuePropName: 'checked',
 						initialValue: true
 					})(<Checkbox className="rememberBox">Remember me</Checkbox>)}
 					<a className={loginStyle.loginFormForgot} href="">

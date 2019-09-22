@@ -1,10 +1,10 @@
-import { hot } from "react-hot-loader/root";
-import React, { Component } from "react";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import winResize from "util/windowResize";
-import PropTypes from "prop-types";
-import appStyle from "../styles/app.scss";
+import { hot } from 'react-hot-loader/root';
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import winResize from 'util/windowResize';
+import PropTypes from 'prop-types';
+import appStyle from '../styles/app.scss';
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -12,7 +12,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		sessionStorage.setItem("loginStatus", "false");
+		sessionStorage.setItem('loginStatus', 'false');
 	}
 
 	render() {

@@ -1,4 +1,4 @@
-import { LOGIN } from "./const";
+import { LOGIN } from './const';
 const actions = {
 	login: function(user) {
 		return {

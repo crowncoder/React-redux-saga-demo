@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import LoginForm from "components/loginForm";
-import action from "actions/loginAction";
-import indexStyle from "styles/login.scss";
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import LoginForm from 'components/loginForm';
+import action from 'actions/loginAction';
+import indexStyle from 'styles/login.scss';
 
-const loginImg = require("images/wechat.png");
+const loginImg = require('images/wechat.png');
 class loginContainer extends Component {
 	constructor(props) {
 		super(props);
