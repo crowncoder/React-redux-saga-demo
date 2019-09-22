@@ -32,3 +32,5 @@ bower_components/
 .vscode/
 
 log.txt
+
+coverage
