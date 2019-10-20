@@ -1,5 +1,6 @@
 # React-redux-saga-demo
-![](https://img.shields.io/travis/crowncoder/React-redux-saga-demo) ![](https://img.shields.io/badge/React-V16.9-blue)  ![](https://img.shields.io/badge/Webpack-V4-brightgreen)
+![](https://img.shields.io/travis/crowncoder/React-redux-saga-demo) ![](https://img.shields.io/badge/React-V16.9-blue)  ![](https://img.shields.io/badge/Webpack-V4-brightgreen) 
+
 A sample react project implements the login function by react-router,redux ,redux-saga,ant-design.
 
 # Technology Stack
