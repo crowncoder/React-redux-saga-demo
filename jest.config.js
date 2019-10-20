@@ -11,9 +11,10 @@ module.exports = {
 		'^actions(.*)$': '<rootDir>/src/actions$1',
 		'^components(.*)$': '<rootDir>/src/components$1',
 		'^saga(.*)$': '<rootDir>/src/saga$1',
-		'^images(.*)$': '<rootDir>/src/images$1',
-		'^styles(.*)$': '<rootDir>/src/styles$1',
-		'^containers(.*)$': '<rootDir>/src/containers$1'
+		'^images(.*)$': '<rootDir>/test/__mocks__/fileMock.js',
+		// '^styles(.*)$': "identity-obj-proxy",
+		'^containers(.*)$': '<rootDir>/src/containers$1',
+		'\\.(css|less|scss)$': 'identity-obj-proxy'
 	},
 	setupFiles: ['<rootDir>/test/setupTests.js'], // 运行测试前可运行的脚本，比如注册enzyme的兼容
 	testMatch: [
@@ -29,5 +30,6 @@ module.exports = {
 	transformIgnorePatterns: [
 		// 转换时需要忽略的文件
 		'[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$'
-	]
+	],
+	snapshotSerializers: ['enzyme-to-json/serializer']
 };

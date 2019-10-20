@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Main 1`] = `
+<div>
+  <div
+    class="userImage"
+  />
+  <div
+    class="settingImage"
+  />
+  <article>
+    <header>
+      <h1
+        class="welcome"
+      >
+        Welcome to GTC's Demo
+      </h1>
+    </header>
+  </article>
+</div>
+`;
