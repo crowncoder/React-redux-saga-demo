@@ -1,0 +1,16 @@
+html{
+  font-size: 16px ;
+}
+#app{
+  height: 100%;
+}
+@media screen and (max-width:1500px){
+html{
+  font-size: 12px ;
+}
+}
+
+._35W_9RS9gehMednJTZRT6N{display:flex;align-items:center;justify-content:center;flex-direction:column;height:100%}._1Z0C0BkuGuyBKCVYopAH64{width:25rem}.x0jCLdgBACSG3OGYWa0u_{float:right}._2_TrtaaUoou9TSAod-CPl_{width:100%}._2NfRYWyWU2gNydnevB_9Z9{height:45px}.qHWqBoBD6Su1a6Z3L39Hz{text-align:center}._2T8Typ7JN-Bqs-HEc1ebGP{width:9.375rem;margin-bottom:2.5rem}.WqPZXbnVe-1QS6hT3Z9Om{float:left}
+
+
+/*# sourceMappingURL=app.a80f3.css.map*/
